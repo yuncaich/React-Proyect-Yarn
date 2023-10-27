@@ -33,7 +33,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14 # Cambia a la versión de Node.js que necesites
+          node-version: 16 # Cambia a la versión de Node.js que necesites
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install
