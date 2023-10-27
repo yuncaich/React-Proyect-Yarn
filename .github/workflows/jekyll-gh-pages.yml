@@ -33,19 +33,19 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: 14 # Cambia a la versión de Node.js que necesites
+          cache: 'yarn'
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './dist'
+          path: './dist' # Ajusta la ruta de acuerdo a tu proyecto
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
